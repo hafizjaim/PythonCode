@@ -1,8 +1,11 @@
 1. Normal Distribution
 
 from scipy.stats import norm
+
 norm.cdf(x,mean,sd)                 #find probablity of x or less
+
 norm.ppf(percentile,mean,sd)        #find value of based on the percentile
+
 norm.rvs(mean, sd, size=x)          #generate random number
 
 
@@ -36,4 +39,29 @@ from scipy.stats import uniform
 uniform.cdf(x,start,end) #probability of x
 
 uniform.rvs(start,end,size=x) #generate x random number between start & end
+
+5. Poisson Distribution
+
+from scipy.stats import poisson
+
+probability = poisson.pmf(x,mean) - # Probability of x responses
+
+probability = poisson.cdf(x,mean) - # Probability of x responses
+
+
+6. Exponential Distribution
+
+#Probability of time between Poisson events
+#EXAMPLES ; To further evaluate salesman's performance, 
+you want to know how much time it takes him to respond to a lead after he opens it. On average, 
+it takes 2.5 hours for him to respond. In this exercise, 
+you'll calculate probabilities of different amounts of time passing between salesman receiving a lead and sending a response.
+
+expon.cdf(1, scale=2.5)
+
+
+
+7. T-distribution
+
+
 
